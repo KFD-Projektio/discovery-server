@@ -1,9 +1,18 @@
 spring:
   application:
-    name: "ProjektioEureka"
+    name: discovery-eureka-service
+
+  profiles:
+    default: dev
+
+  cloud:
+    config:
+      enabled: true
+      uri: ${CONFIG_SERVER_URI:http://localhost:8888}
+      fail-fast: true
+
+  config:
+    import: "configserver:"
+
 server:
   port: 8761
-eureka:
-  client:
-    register-with-eureka: false
-    fetch-registry: false
