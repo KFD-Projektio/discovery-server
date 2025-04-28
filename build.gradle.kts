@@ -33,6 +33,8 @@ dependencies {
 	testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 	implementation("org.springframework.boot:spring-boot-starter-aop:2.6.4")
 	implementation("org.springframework.retry:spring-retry:2.0.11")
+
+	implementation("io.micrometer:micrometer-registry-prometheus:1.14.5")
 }
 
 dependencyManagement {
